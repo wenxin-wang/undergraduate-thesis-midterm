@@ -1,0 +1,108 @@
+%%% -*- TeX-engine: xetex -*-
+\documentclass{beamer}
+
+% for themes, etc.
+\input{preambles/packages}
+\input{preambles/styles}
+\input{preambles/fonts}
+
+\title{
+基于翻译技术的流量调度研究 \\
+中期报告
+}
+\author{王文鑫}
+\date{2016年4月15日}
+% \AtBeginSection[]
+% {
+%   \begin{frame}<beamer> 
+%     \tableofcontents[currentsection]
+%   \end{frame}
+% }
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\section{研究目标}
+
+\begin{frame}
+  \frametitle{研究目标}
+
+  存在多个多种类的IPv6出口时，二级翻译器对流量的调度机制和策略
+\end{frame}
+
+\subsection{现有模型}
+\begin{frame}
+  \frametitle{现有模型}
+
+  \begin{center}
+    \includegraphics[width=0.8\textwidth]{figs/current-model.pdf}  
+  \end{center}
+
+  \vspace{1em}
+
+  \begin{block}{}
+    \begin{itemize}
+    \item 所有流量必须先通过IVI无状态翻译
+    \item DS-Lite隧道仅作为无法翻译时的后备方法
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\subsection{目标模型}
+\begin{frame}
+  \frametitle{目标模型}
+
+  \begin{center}
+    \includegraphics[width=0.8\textwidth]{figs/target-model.pdf}  
+  \end{center}
+
+  \begin{block}{}
+    \begin{itemize}
+    \item 按照流信息、链路状态等参数向不同出口分发流量
+    \item 无状态翻译仍可能失败
+    \item 不能只使用目标地址的路由进行调度
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\section{翻译器设计}
+\begin{frame}
+  \frametitle{翻译器设计}
+
+  \begin{center}
+    \includegraphics[width=0.5\textwidth]{figs/xlat-model.pdf}  
+  \end{center}
+
+  \begin{block}{}
+    \begin{itemize}
+    \item 按照流信息、链路状态等参数向不同出口分发流量
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\section{完成工作}
+\begin{frame}
+  \frametitle{完成工作}
+
+\end{frame}
+
+\section{后续工作}
+\begin{frame}
+  \frametitle{后续工作}
+
+\end{frame}
+
+\section{Q\&A}
+
+\begin{frame}
+  \frametitle{Q\&A}
+  \begin{center}
+  {\LARGE 谢谢！}
+  \vspace{3em}
+  {\LARGE 请老师们提问和指导！}
+  \end{center}
+\end{frame}
+\end{document}
