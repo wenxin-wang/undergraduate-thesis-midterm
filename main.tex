@@ -77,9 +77,9 @@
   \begin{block}{模块}
     \begin{itemize}
     \item 控制器：观察、决策
-    \item OVS交换机：分发
+    \item OVS交换机：分发，非传统路由，可编程性强
     \item 翻译/隧道出口选择 $\rightarrow$ 流表项
-    \item netns封装：使用linux路由
+    \item netns封装：隔绝调度和出口路由
     \end{itemize}
   \end{block}
 \end{frame}
@@ -94,8 +94,8 @@
   
   \begin{block}{}
     \begin{itemize}
-    \item 使用libvirt和netns搭建环境，测试设计和代码
-    \item OVS：设计流表，修改拓扑
+    \item 使用libvirt和netns搭建环境，测试拓扑设计和代码
+    \item OVS：设计流表
     \item 翻译器：netfilter $\rightarrow$ iptables，可以被netns隔离
     \item 控制器：静态策略、轮询切换
     \end{itemize}
@@ -144,8 +144,8 @@
   \frametitle{进度安排}
   \begin{block}{}
     \begin{itemize}
-    \item 4月15日-5月15日：完成其他调度策略
-    \item 5月16日-答辩：继续实现多个翻译器间的调度，完善论文
+    \item 4月15日-5月15日：实现多个翻译器间的调度
+    \item 5月16日-答辩：封装接口，完善论文
     \end{itemize}
   \end{block}
 \end{frame}
